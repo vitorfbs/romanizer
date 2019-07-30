@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+echo "request url: http://localhost:4567/9"
+curl http://localhost:4567/9
+
+echo ""
+
+echo "request url: http://localhost:4567/99"
+curl http://localhost:4567/99
+
+echo ""
+
+echo "request url: http://localhost:4567/999"
+curl http://localhost:4567/999
+
+echo ""
+
+echo "request url: http://localhost:4567/9999"
+curl http://localhost:4567/9999
+
+echo ""
+
+echo "request url: http://localhost:4567/99999"
+curl http://localhost:4567/99999
