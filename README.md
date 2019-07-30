@@ -8,6 +8,12 @@ Written in NodeJS, insert numbers from -9999 to 9999 and receive a JSON of the s
 
 #### 1.1 Direct usage (no container or image)
 
+1. Download or clone the repository
+
+```
+git clone https://github.com/vitorfbs/romanizer.git
+```
+
 #### 1.2 Docker
 
 #### 1.3 Live Preview
