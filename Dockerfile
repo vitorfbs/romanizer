@@ -5,5 +5,6 @@ COPY . /usr/src/app
 
 RUN npm install
 
-EXPOSE 5000
+EXPOSE 4567
+
 CMD npm run development
