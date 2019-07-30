@@ -1,4 +1,5 @@
 //TODO find a way to remove the redundancy of "Dez" in the tens and outliers arrays
+//TODO find a better logic for the number access than using a null value to buffer the beggining of the array
 
 const units = [
   "Zero",
@@ -14,6 +15,7 @@ const units = [
 ];
 
 const tens = [
+  null,
   "Dez", 
   "Vinte", 
   "Trinta", 
@@ -26,6 +28,7 @@ const tens = [
 ];
 
 const hundreds = [
+  null,
   "Cem", 
   "Duzentos", 
   "Trezentos", 
