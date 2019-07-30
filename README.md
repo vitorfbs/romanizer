@@ -4,40 +4,40 @@ Written in NodeJS, insert numbers from -9999 to 9999 and receive a JSON of the s
 
 ---
 
-## Setup and Usage
+### Setup and Usage
 
-### Direct usage (no container or image)
+#### Direct usage (no container or image)
 
-### Docker
+#### Docker
 
-### Live Preview
+#### Live Preview
 
 ---
 
-## Roadmap
+### Roadmap
 
 1. Personalized error responses for each wrong input of the user.
 2. Remove unused dependancies
 3. Localization for the dictionary (upon demand of extra languages. ex.: EN-US)
 
 
-## References
+### References
 
-### Dependancy's or Repository Links
+#### Dependancy's or Repository Links
 
-#### Github
+##### Github
 
 nodeJS: https://github.com/nodejs/node <br/>
 expressJS: https://github.com/expressjs/express <br/>
 axios: https://github.com/axios/axios <br/>
 nodemon: https://github.com/remy/nodemon <br/>
 
-#### NPM
+##### NPM
 
 cookie-parser: https://www.npmjs.com/package/cookie-parser
 jslint: https://www.npmjs.com/package/jslint <br/>
 
-### Educational and Usage Referral Links
+#### Educational and Usage Referral Links
 
 https://www.w3schools.com/nodejs/nodejs_http.asp <br/>
 https://nodejs.org/api/http.html <br/>
