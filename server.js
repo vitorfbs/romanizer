@@ -16,7 +16,7 @@ const index = require("./api/app");
 
 // PORT constant. Change to available port if needed.
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4567;
 
 // Server initialization
 
