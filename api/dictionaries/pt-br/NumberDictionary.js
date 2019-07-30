@@ -1,3 +1,5 @@
+//TODO find a way to remove the redundancy of "Dez" in the tens and outliers arrays
+
 const units = [
   "Zero",
   "Um", 
