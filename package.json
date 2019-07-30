@@ -1,0 +1,19 @@
+{
+  "name": "romanizer",
+  "version": "1.0.0",
+  "description": "Written in NodeJS, insert numbers from -9999 to 9999 and receive a JSON of the spelled version of the number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitorfbs/romanizer.git"
+  },
+  "author": "Vitor F. B. Silva <vitorfbs.ti@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitorfbs/romanizer/issues"
+  },
+  "homepage": "https://github.com/vitorfbs/romanizer#readme"
+}
