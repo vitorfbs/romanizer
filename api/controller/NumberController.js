@@ -9,7 +9,9 @@ async function getConvertedValue(request, response) {
     let convertedNumberString = '';
     
     if (value[0] == '-') {
+      if(value[1] != '0'){
       convertedNumberString = 'Menos '
+      }
       value = String(value).substr(1);
     }
       
