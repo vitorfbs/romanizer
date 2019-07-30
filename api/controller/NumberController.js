@@ -23,7 +23,7 @@ async function getConvertedValue(request, response) {
     convertedNumberString += ConvertionHelper.generateConvertedNumberString(parsedValue);
     return ResponseHandler.onRequestSuccess(response, convertedNumberString);
   } catch (error) {
-    return ResponseHandler.onServerSideError(response, 'Error when converting number.');
+    return ResponseHandler.onRequestError(response, 'Error when converting number.');
   }
 }
 
