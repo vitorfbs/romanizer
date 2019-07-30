@@ -1,7 +1,7 @@
 const ConvertionHelper = require('./helpers/ConvertionHelper');
 const ValidationHelper = require('./helpers/ValidationHelper');
 
-const ErrorHandler = require('../errors/handler');
+const ResponseHandler = require('../handler/handler');
 
 async function getConvertedValue(request, response) {
   try {
@@ -9,7 +9,9 @@ async function getConvertedValue(request, response) {
     let convertedNumberString = '';
     
     if (value[0] == '-') {
-      convertedNumberString = 'Menos '
+      if(value[1] != '0') {
+        convertedNumberString = 'Menos ';
+      }
       value = String(value).substr(1);
     }
       
@@ -18,13 +20,12 @@ async function getConvertedValue(request, response) {
     }
     
     parsedValue = parseInt(value);
-    convertedNumberString = convertedNumberString + ConvertionHelper.generateConvertedNumberString(parsedValue);
-    return ErrorHandler.onSuccess(response, convertedNumberString);
+    convertedNumberString += ConvertionHelper.generateConvertedNumberString(parsedValue);
+    return ResponseHandler.onRequestSuccess(response, convertedNumberString);
   } catch (error) {
-    return ErrorHandler.onError(response, error, 'Error when converting number.');
+    return ResponseHandler.onServerSideError(response, 'Error when converting number.');
   }
 }
-
 
 module.exports = {
   getConvertedValue
