@@ -1,5 +1,4 @@
 const HTTPStatus = require('http-status');
-const config = require('../../config/env/config')();
 
 function onRequestSuccess(response, data) {
   return response.status(HTTPStatus.OK).json({
@@ -8,7 +7,7 @@ function onRequestSuccess(response, data) {
   });
 }
 
-function onServerSideError(response, message) {
+function onRequestError(response, message) {
   return response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({
     status_code: 500,
     message: [message],
@@ -17,5 +16,5 @@ function onServerSideError(response, message) {
 
 module.exports = {
   onRequestSuccess,
-  onServerSideError,
+  onRequestError,
 };
