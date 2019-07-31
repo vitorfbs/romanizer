@@ -4,7 +4,7 @@ const HTTPStatus = require('http-status');
 function onRequestSuccess(response, data) {
   return response.status(HTTPStatus.OK).json({
     status: 200,
-    converted_number: data
+    extenso: data
   });
 }
 
