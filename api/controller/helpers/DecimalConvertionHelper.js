@@ -1,3 +1,6 @@
+//This helper concentrates all the digit conversions of the application. It requires
+//the number dictionary for the translation process.
+//TODO code for localization here.
 const dictionary = require('../../dictionaries/pt-br/NumberDictionary');
 
 function unitsConverter(value){

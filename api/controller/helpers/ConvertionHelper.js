@@ -1,6 +1,9 @@
 //TODO remove the parseInts to something more generic and defined outside of these scopes
 const DecimalConvertionHelper = require('./DecimalConvertionHelper');
 
+
+//This is the main switch code block for the conversion process. For each case,
+//the corresponding number size is processed to the full text form, with the default being single digits.
 function generateConvertedNumberString(value) {
   value = String(value);
   let convertedNumberString = '';
