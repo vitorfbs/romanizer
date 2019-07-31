@@ -7,7 +7,7 @@ function checkRequestValueIntegrity(value) {
         return null;
     }
     
-    const res = value.match(/^-?[0-9]\d*(\.\d+)?$/);
+    const res = value.match(/^[0-9]+$/);
     return res;
   }     
 
