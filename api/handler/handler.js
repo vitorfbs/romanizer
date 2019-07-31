@@ -10,8 +10,8 @@ function onRequestSuccess(response, data) {
 
 //failure of request function, returning the error message
 function onRequestError(response, message) {
-  return response.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({
-    status: 500,
+  return response.status(HTTPStatus.BAD_REQUEST).json({
+    status: 400,
     message: [message],
   });
 }

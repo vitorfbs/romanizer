@@ -9,25 +9,23 @@ const ResponseHandler = require('../handler/handler');
 //And then takes the pertinent responses from the returns of the internal data processing
 async function getConvertedValue(request, response) {
   try {
-    let value = request.params.value;
+    let value = Number(request.params.value);
     let convertedNumberString = '';
     
-    if (value[0] == '-') {
-      if(value[1] != '0') {
-        convertedNumberString = 'Menos ';
-      }
-      value = String(value).substr(1);
+    if(value < 0){
+      value = value * -1;
+      convertedNumberString = `Menos `;
     }
-      
-    if (!ValidationHelper.checkRequestValueIntegrity(value)) {
-      throw Error ('Your requested value is not valid. Request a number between -99999 and 99999, with only numbers and a minus sign in front of the value for negative values')
+
+    if(value == null || !ValidationHelper.checkRequestValueIntegrity(String(value))){
+      throw Error;
     }
     
-    parsedValue = parseInt(value);
-    convertedNumberString += ConvertionHelper.generateConvertedNumberString(parsedValue);
+    convertedNumberString += ConvertionHelper.generateConvertedNumberString(value);
+    
     return ResponseHandler.onRequestSuccess(response, convertedNumberString);
   } catch (error) {
-    return ResponseHandler.onRequestError(response, 'Error when converting number.');
+    return ResponseHandler.onRequestError(response, 'Your requested value is not valid. Request a number between -99999 and 99999, with only numbers and a minus sign in front of the value for negative values.');
   }
 }
 

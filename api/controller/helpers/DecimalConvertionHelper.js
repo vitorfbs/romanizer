@@ -5,40 +5,42 @@ const dictionary = require('../../dictionaries/pt-br/NumberDictionary');
 
 function unitsConverter(value){
   if(value.length == 1){
-    return dictionary.units[parseInt(value)];
+    return dictionary.units[Number(value)];
   } else{
-    return dictionary.units[parseInt(value[value.length-1])];
+    return dictionary.units[Number(value[value.length-1])];
   }
 }
 
 function tensConverter(value){
-  if(parseInt(value[value.length-2]) == 1){
-    return dictionary.outliers[parseInt(value[value.length-1])];
+  if(value[value.length-2] == 1){
+    return dictionary.outliers[value[value.length-1]];
   } else {
-    return dictionary.tens[parseInt(value[value.length-2])];
+    return `${dictionary.tens[value[value.length-2]]}`;
   }
 }
 
 function hundredsConverter(value){
-  if(parseInt(value[value.length-3]) == 1 && (parseInt(value[value.length-2]) >= 1 || parseInt(value[value.length-1]) >= 1 )){
+  if(value[value.length-3] == 1 && (value[value.length-2] >= 1 || value[value.length-1] >= 1 )){
     return 'Cento';
   } 
-  return dictionary.hundreds[parseInt(value[value.length-3])];
+  return `${dictionary.hundreds[value[value.length-3]]}`;
 }
 
 function thousandsConverter(value){
-  if (parseInt(value[value.length-4]) == 1){
+  if (value.length >= 4 && value[0] == 1) {
     return 'Mil';
-  } else {
-  return dictionary.units[parseInt(value[value.length-4])] + ' Mil';
+  } else if (value.length > 4){
+    return `e ${dictionary.units[value[value.length-4]]} Mil`;
+  } else{
+    return `${dictionary.units[value[value.length-4]]} Mil`;
   }
 }
 
 function tenthsOfthousandsConverter(value){
-  if(parseInt(value[0]) == 1){
-    return dictionary.outliers[parseInt(value[1])];
+  if(value[0] == 1){
+    return dictionary.outliers[value[1]];
   } else {
-    return dictionary.tens[parseInt(value[0])];
+    return `${dictionary.tens[value[0]]}`;
   }
 }
 

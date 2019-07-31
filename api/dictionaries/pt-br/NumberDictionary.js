@@ -35,7 +35,7 @@ const hundreds = [
   "Quatrocentos", 
   "Quinhentos", 
   "Seiscentos", 
-  "Setescentos", 
+  "Setecentos", 
   "Oitocentos", 
   "Novecentos"
 ];
@@ -47,8 +47,8 @@ const outliers = [
   "Treze", 
   "Catorze", 
   "Quinze", 
-  "Dezeseis", 
-  "Dezesete", 
+  "Dezesseis", 
+  "Dezessete", 
   "Dezoito", 
   "Dezenove"
 ];

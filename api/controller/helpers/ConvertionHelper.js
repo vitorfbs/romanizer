@@ -5,15 +5,15 @@ const DecimalConvertionHelper = require('./DecimalConvertionHelper');
 //This is the main switch code block for the conversion process. For each case,
 //the corresponding number size is processed to the full text form, with the default being single digits.
 function generateConvertedNumberString(value) {
-  value = String(value);
-  let convertedNumberString = '';
+  var value = Array.from(value.toString()).map(Number);
+  var convertedNumberString = '';
 
   switch(value.length) {
 
   case 2:
     convertedNumberString += DecimalConvertionHelper.tensConverter(value);
       
-    if(parseInt(value[value.length-1]) > 0 && parseInt(value[0]) != 1){
+    if(value[value.length-1] > 0 && value[0] != 1){
       convertedNumberString += ` e ${DecimalConvertionHelper.unitsConverter(value)}`;
     }
 
@@ -22,10 +22,10 @@ function generateConvertedNumberString(value) {
   case 3:
     convertedNumberString += DecimalConvertionHelper.hundredsConverter(value);
 
-    if(parseInt(value[value.length-2]) > 0){
+    if(value[value.length-2] > 0){
       convertedNumberString += ` e ${DecimalConvertionHelper.tensConverter(value)}`;
     }
-    if(parseInt(value[value.length-1]) > 0 && parseInt(value[value.length-2]) != 1){
+    if(value[value.length-1] > 0 && value[value.length-2] != 1){
       convertedNumberString += ` e ${DecimalConvertionHelper.unitsConverter(value)}`;
     }
 
@@ -34,15 +34,15 @@ function generateConvertedNumberString(value) {
   case 4:
     convertedNumberString += DecimalConvertionHelper.thousandsConverter(value);
     
-    if(parseInt(value[value.length-3]) > 0){
+    if(value[value.length-3] > 0){
       convertedNumberString += ` e ${DecimalConvertionHelper.hundredsConverter(value)}`;
     }
 
-    if(parseInt(value[value.length-2]) > 0){
+    if(value[value.length-2] > 0){
       convertedNumberString += ` e ${DecimalConvertionHelper.tensConverter(value)}`;
     }
 
-    if(parseInt(value[value.length-1]) > 0 && parseInt(value[value.length-2]) != 1){
+    if(value[value.length-1] > 0 && value[value.length-2] != 1){
       convertedNumberString += ` e ${DecimalConvertionHelper.unitsConverter(value)}`;
     }
     
@@ -51,21 +51,21 @@ function generateConvertedNumberString(value) {
   case 5:
     convertedNumberString += DecimalConvertionHelper.tenthsOfthousandsConverter(value);
     
-    if(parseInt(value[value.length-4]) > 0){
-      convertedNumberString += ` e ${DecimalConvertionHelper.thousandsConverter(value)}`;
+    if(value[value.length-4] > 0){
+      convertedNumberString += ` ${DecimalConvertionHelper.thousandsConverter(value)}`;
     } else {
       convertedNumberString += ' Mil';
     }
 
-    if(parseInt(value[value.length-3]) > 0){
+    if(value[value.length-3] > 0){
       convertedNumberString += ` e ${DecimalConvertionHelper.hundredsConverter(value)}`;
     }
 
-    if(parseInt(value[value.length-2]) > 0){
+    if(value[value.length-2] > 0){
       convertedNumberString += ` e ${DecimalConvertionHelper.tensConverter(value)}`;
     }
 
-    if(parseInt(value[value.length-1]) > 0 && parseInt(value[value.length-2]) != 1){
+    if(value[value.length-1] > 0 && value[value.length-2] != 1){
       convertedNumberString += ` e ${DecimalConvertionHelper.unitsConverter(value)}`;
     }
     break;

@@ -129,7 +129,7 @@ Run the scripts on your terminal to receive a response from a series of curl req
 
 ##### 1.3.2 Postman
 
-Import the collection to your postman local environment. There are four tests of integrity for each request, and in the case of the invalid requests, it is wanted that the response is a **500 Internal Server Error** error response.
+Import the collection to your postman local environment. There are four tests of integrity for each request, and in the case of the invalid requests, it is wanted that the response is a **400 BAD REQUEST** error response.
 
 There are two collections, one which will test your localhost version of Romanizer and one which will test the Heroku version of the application.
 

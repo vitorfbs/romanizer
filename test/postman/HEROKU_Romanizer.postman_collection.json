@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "ff9cc83c-3404-4ff3-b781-1f18e72b7f89",
-		"name": "Romanizer Heroku",
+		"_postman_id": "4b207f1d-c4df-44f9-92bf-fa1b1cc2b76a",
+		"name": "Romanizer - Heroku",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -17,7 +17,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -38,12 +38,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/9",
-					"protocol": "https",
+					"raw": "{{url}}/9",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"9"
@@ -64,7 +61,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -85,12 +82,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/11",
-					"protocol": "https",
+					"raw": "{{url}}/11",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"11"
@@ -111,7 +105,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -132,12 +126,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/99",
-					"protocol": "https",
+					"raw": "{{url}}/99",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"99"
@@ -158,7 +149,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -179,12 +170,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/999",
-					"protocol": "https",
+					"raw": "{{url}}/999",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"999"
@@ -205,7 +193,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -226,12 +214,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/9999",
-					"protocol": "https",
+					"raw": "{{url}}/9999",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"9999"
@@ -252,7 +237,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -273,15 +258,56 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/99999",
-					"protocol": "https",
+					"raw": "{{url}}/99999",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"99999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exception Test - More than one position with a zero at position zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/001",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"001"
 					]
 				}
 			},
@@ -299,7 +325,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -320,12 +346,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/0",
-					"protocol": "https",
+					"raw": "{{url}}/0",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"0"
@@ -346,7 +369,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -367,12 +390,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/-0",
-					"protocol": "https",
+					"raw": "{{url}}/-0",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"-0"
@@ -393,7 +413,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -414,12 +434,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/1101",
-					"protocol": "https",
+					"raw": "{{url}}/1101",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"1101"
@@ -440,7 +457,7 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"extenso\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
@@ -461,12 +478,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/1100",
-					"protocol": "https",
+					"raw": "{{url}}/1100",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"1100"
@@ -484,7 +498,7 @@
 						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(500);",
+							"    pm.response.to.have.status(400);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"message\");",
@@ -493,7 +507,7 @@
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
 							"});",
 							"pm.test(\"Status code name has string\", function () {",
-							"    pm.response.to.have.status(\"Internal Server Error\");",
+							"    pm.response.to.have.status(\"Bad Request\");",
 							"});"
 						],
 						"type": "text/javascript"
@@ -508,12 +522,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/999999",
-					"protocol": "https",
+					"raw": "{{url}}/999999",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"999999"
@@ -531,7 +542,7 @@
 						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(500);",
+							"    pm.response.to.have.status(400);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"message\");",
@@ -540,7 +551,7 @@
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
 							"});",
 							"pm.test(\"Status code name has string\", function () {",
-							"    pm.response.to.have.status(\"Internal Server Error\");",
+							"    pm.response.to.have.status(\"Bad Request\");",
 							"});"
 						],
 						"type": "text/javascript"
@@ -555,12 +566,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/9a",
-					"protocol": "https",
+					"raw": "{{url}}/9a",
 					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
+						"{{url}}"
 					],
 					"path": [
 						"9a"
@@ -568,53 +576,36 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "de75a104-afec-4181-9fdb-9b8b215a638e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		},
 		{
-			"name": "Error Message Test - More than one position with a zero at position zero",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(500);",
-							"});",
-							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"message\");",
-							"});",
-							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"status\");",
-							"});",
-							"pm.test(\"Status code name has string\", function () {",
-							"    pm.response.to.have.status(\"Internal Server Error\");",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "https://vfbs-romanizer.herokuapp.com/001",
-					"protocol": "https",
-					"host": [
-						"vfbs-romanizer",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"001"
-					]
-				}
-			},
-			"response": []
+			"listen": "test",
+			"script": {
+				"id": "16bd8e77-2870-4530-aaad-68a5c980faf8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "96c31621-edd1-4aef-8a3e-4cf676246b8b",
+			"key": "url",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
