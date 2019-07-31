@@ -1,8 +1,12 @@
+//Require Helpers from /helpers
 const ConvertionHelper = require('./helpers/ConvertionHelper');
 const ValidationHelper = require('./helpers/ValidationHelper');
 
+//Require the ResponseHandler
 const ResponseHandler = require('../handler/handler');
 
+//The main function for the Numbers API. Through this async, the application processes requested value
+//And then takes the pertinent responses from the returns of the internal data processing
 async function getConvertedValue(request, response) {
   try {
     let value = request.params.value;
