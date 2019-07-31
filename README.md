@@ -1,6 +1,6 @@
 # &alpha; ROMANIZER
 
-Written in **NodeJS**, insert numbers from **-9999** to **9999** and receive a JSON of the spelled version of the number.
+Written in **NodeJS**, insert numbers from **-99999** to **99999** and receive a JSON of the spelled version of the number.
 
 | Overview  |
 | ------------- |
@@ -69,6 +69,14 @@ The application can run on a docker container or as a standalone application, gr
 
 For that, it is necessary that you have a running javascript/npm environment. This application was built on the npm **6.10.2** version.
 
+For running the requests through the browser, simply run the request through the url. example.: http://localhost:4567/55 should return the request with the **converted_number** as "Cinquenta e Cinco".
+
+For running in the terminal, simply run:
+```
+curl http://localhost:4567/55
+```
+to receive the same result as the browser example directly in your terminal.
+
 #### 1.1 Direct usage (no container or image)
 
 1. Download or clone the repository
@@ -97,7 +105,7 @@ A simple pull from the repository and running it as a container will run the app
 
 For reference, these are the commands used to generate and run the **vfbemsilva/romanizer** image:
 ```
-//criar imagem
+//create image
 docker build -f Dockerfile . -t vfbemsilva/romanizer:latest
 
 //image push to the server
@@ -106,7 +114,7 @@ docker push vfbemsilva/romanizer:latest
 //image push to the server
 docker pull vfbemsilva/romanizer:latest
 
-//pra rodar
+//running the image
 docker run -dt -p 4567:4567 --name romanizer vfbemsilva/romanizer:latest
 ```
 
@@ -122,7 +130,18 @@ Run the scripts on your terminal to receive a response from a series of curl req
 ##### 1.3.2 Postman
 
 Import the collection to your postman local environment. There are four tests of integrity for each request, and in the case of the invalid requests, it is wanted that the response is a **500 Internal Server Error** error response.
+
+There are two collections, one which will test your localhost version of Romanizer and one which will test the Heroku version of the application.
+
 For more information, refer to the [Postman](https://learning.getpostman.com/docs/postman/api_documentation/intro_to_api_documentation/) documentation.
+
+#### 1.4 Heroku (Live Preview)
+
+Alternatively, you can use the Heroku live version of the application to check out the functionalities without needing to run the code localy:
+<br/>
+https://vfbs-romanizer.herokuapp.com
+<br/>
+The functionality is the same as expected, following the guidelines of the **usage** section. 
 
 ---
 
