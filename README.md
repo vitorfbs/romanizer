@@ -1,6 +1,6 @@
 # &alpha; ROMANIZER
 
-Written in **NodeJS**, insert numbers from **-9999** to **9999** and receive a JSON of the spelled version of the number.
+Written in **NodeJS**, insert numbers from **-99999** to **99999** and receive a JSON of the spelled version of the number.
 
 | Overview  |
 | ------------- |
