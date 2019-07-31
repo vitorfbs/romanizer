@@ -105,7 +105,7 @@ A simple pull from the repository and running it as a container will run the app
 
 For reference, these are the commands used to generate and run the **vfbemsilva/romanizer** image:
 ```
-//criar imagem
+//create image
 docker build -f Dockerfile . -t vfbemsilva/romanizer:latest
 
 //image push to the server
@@ -114,7 +114,7 @@ docker push vfbemsilva/romanizer:latest
 //image push to the server
 docker pull vfbemsilva/romanizer:latest
 
-//pra rodar
+//running the image
 docker run -dt -p 4567:4567 --name romanizer vfbemsilva/romanizer:latest
 ```
 
