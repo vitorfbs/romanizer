@@ -136,11 +136,13 @@ There are two collections, one which will test your localhost version of Romaniz
 For more information, refer to the [Postman](https://learning.getpostman.com/docs/postman/api_documentation/intro_to_api_documentation/) documentation.
 
 #### 1.4 Heroku (Live Preview)
+
 Alternatively, you can use the Heroku live version of the application to check out the functionalities without needing to run the code localy:
 <br/>
 https://vfbs-romanizer.herokuapp.com
 <br/>
 The functionality is the same as expected, following the guidelines of the **usage** section. 
+
 ---
 
 ### 2 Roadmap
