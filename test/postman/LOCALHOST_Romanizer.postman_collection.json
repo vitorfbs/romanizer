@@ -236,7 +236,7 @@
 			"response": []
 		},
 		{
-			"name": "Decimal Test - Hundreds of Thousands",
+			"name": "Decimal Test - Tens of Thousands",
 			"event": [
 				{
 					"listen": "test",
@@ -374,7 +374,7 @@
 			"response": []
 		},
 		{
-			"name": "Error Message Test - Out of Bounds Value",
+			"name": "Exception Test - \"Cento\" instead of \"Cem\"",
 			"event": [
 				{
 					"listen": "test",
@@ -392,6 +392,98 @@
 							"});",
 							"pm.test(\"Status code name has string\", function () {",
 							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4567/1101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"1101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exception Test - \"Cem\" instead of \"Cento\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:4567/1100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"1100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error Message Test - Out of Bounds Value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"Internal Server Error\");",
 							"});"
 						],
 						"type": "text/javascript"
@@ -428,16 +520,16 @@
 						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(500);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
 							"});",
 							"pm.test(\"Status code name has string\", function () {",
-							"    pm.response.to.have.status(\"OK\");",
+							"    pm.response.to.have.status(\"Internal Server Error\");",
 							"});"
 						],
 						"type": "text/javascript"
@@ -474,16 +566,16 @@
 						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(500);",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
 							"});",
 							"pm.test(\"Body matches string\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"status\");",
 							"});",
 							"pm.test(\"Status code name has string\", function () {",
-							"    pm.response.to.have.status(\"OK\");",
+							"    pm.response.to.have.status(\"Internal Server Error\");",
 							"});"
 						],
 						"type": "text/javascript"
