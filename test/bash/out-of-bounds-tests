@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+echo "request url: http://localhost:4567/99999999999"
+curl http://localhost:4567/99999999999
+
+echo ""
+
+echo "request url: http://localhost:4567/abc"
+curl http://localhost:4567/abc
+
+echo ""
+
+echo "request url: http://localhost:4567/-0"
+curl http://localhost:4567/-0
+
