@@ -5,10 +5,10 @@
 const express = require('express');
 const app = express();
 
-// Routes
+// Requires the routing file
 const indexRouter = require('./router');
 
-// Set all routes
+// Setup root router for the application
 app.use('/', indexRouter);
 
 module.exports = app;
