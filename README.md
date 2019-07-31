@@ -90,6 +90,7 @@ Server is now running.
 
 #### 1.2 Docker
 There is a **Docker** image version of the application available in [Docker Hub](https://hub.docker.com/r/vfbemsilva/romanizer).
+<br/>
 <a href="https://hub.docker.com/r/vfbemsilva/romanizer">https://hub.docker.com/r/vfbemsilva/romanizer</a>
 
 A simple pull from the repository and running it as a container will run the application in through the ports defined in the **Dockerfile** and **server.js** file.
