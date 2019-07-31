@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "ff9cc83c-3404-4ff3-b781-1f18e72b7f89",
+		"name": "Romanizer Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Decimal Test - Units",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/9",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal Test - Outliers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/11",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal Test - Tens",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/99",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal Test - Hundreds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/999",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal Test - Thousands",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/9999",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"9999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal Test - Tens of Thousands",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/99999",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"99999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exception Test - Zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/0",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exception Test - Minus Zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/-0",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"-0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exception Test - \"Cento\" instead of \"Cem\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/1101",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"1101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exception Test - \"Cem\" instead of \"Cento\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"converted_number\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/1100",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"1100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error Message Test - Out of Bounds Value",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"Internal Server Error\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/999999",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"999999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error Message Test - Invalid Characters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"Internal Server Error\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/9a",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"9a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Error Message Test - More than one position with a zero at position zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "74cc6f70-cfb5-486b-a43c-57d46de84226",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(500);",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"message\");",
+							"});",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"status\");",
+							"});",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"Internal Server Error\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://vfbs-romanizer.herokuapp.com/001",
+					"protocol": "https",
+					"host": [
+						"vfbs-romanizer",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"001"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
