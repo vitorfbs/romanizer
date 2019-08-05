@@ -7,8 +7,9 @@
     "start": "NODE_ENV=development nodemon ./server.js",
     "development": "NODE_ENV=development nodemon ./server.js",
     "test": "mocha './test/mocha/test.js'",
-    "test-decimals": "mocha './test/mocha/test-decimals.js'",
-    "test-errors": "mocha './test/mocha/test-errors.js'"
+    "test-decimals": "mocha './test/mocha/cases/test-decimals.js'",
+    "test-errors": "mocha './test/mocha/cases/test-errors.js'",
+    "test-outliers": "mocha './test/mocha/cases/test-outliers.js'"
   },
   "dependencies": {
     "axios": "^0.18.0",
