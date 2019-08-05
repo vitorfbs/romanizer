@@ -52,8 +52,18 @@ The choice of focusing all the logic of the *ConvertionHelper.js* around a switc
 	|_bash
     	|inside-boundary-tests
         |out-of-bounds-tests
+        |special-cases-tests
+    |_mocha
+        |_cases
+            |test-decimals.js
+            |test-errors.js
+            |test-outliers.js
+        |_config
+            |host.js
+        |test.js
     |_postman
     	|LOCALHOST_Romanizer.postman_collection.json
+        |HEROKU_Romanizer.postman_collection.json
 |.dockerignore
 |.gitignore
 |Dockerfile
