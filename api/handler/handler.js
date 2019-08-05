@@ -12,7 +12,7 @@ function onRequestSuccess(response, data) {
 function onRequestError(response, message) {
   return response.status(HTTPStatus.BAD_REQUEST).json({
     status: 400,
-    message: [message],
+    message: message,
   });
 }
 
