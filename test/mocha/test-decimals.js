@@ -1,12 +1,15 @@
 var chai = require('chai');
 var chaiHttp = require('chai-http');
+let HostConfig = require('./config/host');
 
+let should = chai.should();
+let host = HostConfig.host();
 
 chai.use(chaiHttp);
-let should = chai.should();
-let host = 'http://localhost:4567';
 
-describe('/GET 9', () => {
+function decimalTests(host) {
+
+describe('/GET 9 - 200 OK', () => {
   it('should return Nove', (done) => {
     chai.request(host)
         .get('/9')
@@ -21,7 +24,7 @@ describe('/GET 9', () => {
   });
 });
 
-describe('/GET 99', () => {
+describe('/GET 99 - 200 OK', () => {
   it('should return Noventa e Nove', (done) => {
     chai.request(host)
         .get('/99')
@@ -36,7 +39,7 @@ describe('/GET 99', () => {
   });
 });
 
-describe('/GET 999', () => {
+describe('/GET 999 - 200 OK', () => {
   it('should return Novecentos e Noventa e Nove', (done) => {
     chai.request(host)
         .get('/999')
@@ -51,7 +54,7 @@ describe('/GET 999', () => {
   });
 });
 
-describe('/GET 9999', () => {
+describe('/GET 9999 - 200 OK', () => {
   it('should return Nove Mil Novecentos e Noventa e Nove', (done) => {
     chai.request(host)
         .get('/9999')
@@ -66,7 +69,7 @@ describe('/GET 9999', () => {
   });
 });
 
-describe('/GET 99999', () => {
+describe('/GET 99999 - 200 OK', () => {
   it('should return Noventa e nove mil novecentos e noventa e nove', (done) => {
     chai.request(host)
         .get('/99999')
@@ -82,7 +85,7 @@ describe('/GET 99999', () => {
 });
 
 
-describe('/GET -9', () => {
+describe('/GET -9 - 200 OK', () => {
   it('should return Menos Nove', (done) => {
     chai.request(host)
         .get('/-9')
@@ -97,7 +100,7 @@ describe('/GET -9', () => {
   });
 });
 
-describe('/GET -99', () => {
+describe('/GET -99 - 200 OK', () => {
   it('should return Menos Noventa e Nove', (done) => {
     chai.request(host)
         .get('/-99')
@@ -112,7 +115,7 @@ describe('/GET -99', () => {
   });
 });
 
-describe('/GET -999', () => {
+describe('/GET -999 - 200 OK', () => {
   it('should return Menos Novecentos e Noventa e Nove', (done) => {
     chai.request(host)
         .get('/-999')
@@ -127,7 +130,7 @@ describe('/GET -999', () => {
   });
 });
 
-describe('/GET -9999', () => {
+describe('/GET -9999 - 200 OK', () => {
   it('should return Menos Nove Mil Novecentos e Noventa e Nove', (done) => {
     chai.request(host)
         .get('/-9999')
@@ -142,7 +145,7 @@ describe('/GET -9999', () => {
   });
 });
 
-describe('/GET -99999', () => {
+describe('/GET -99999 - 200 OK', () => {
   it('should return Menos Noventa e nove mil novecentos e noventa e nove', (done) => {
     chai.request(host)
         .get('/-99999')
@@ -156,3 +159,11 @@ describe('/GET -99999', () => {
         });
   });
 });
+
+}
+
+decimalTests(host);
+
+module.exports = {
+  decimalTests
+};

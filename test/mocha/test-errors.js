@@ -1,37 +1,65 @@
 var chai = require('chai');
 var chaiHttp = require('chai-http');
+let HostConfig = require('./config/host');
 
+let should = chai.should();
+let host = HostConfig.host();
 
 chai.use(chaiHttp);
-let should = chai.should();
-let host = 'http://localhost:4567';
 
-describe('/GET 99999', () => {
-  it('should return Noventa e nove mil novecentos e noventa e nove', (done) => {
+function errorTests(host) {
+
+describe('/GET 999999 - 400 BAD REQUEST', () => {
+  it('should return Error Message', (done) => {
     chai.request(host)
-        .get('/99999')
+        .get('/999999')
         .end((error, response) => {
-              response.should.have.status(200);
+              response.should.have.status(400);
               response.body.status.should.be.a('Number');
-              response.body.extenso.should.be.a('String');
-              response.body.status.should.be.eql(200);
-              response.body.extenso.should.be.eql('Noventa e Nove Mil e Novecentos e Noventa e Nove');
+              response.body.message.should.be.a('String');
+              response.body.status.should.be.eql(400);
+              response.body.message.should.be.eql('Your requested value is not valid. Request a number between -99999 and 99999, with only numbers and a minus sign in front of the value for negative values.');
           done();
         });
   });
 });
 
-describe('/GET 99999', () => {
-  it('should return Noventa e nove mil novecentos e noventa e nove', (done) => {
+
+describe('/GET --1 - 400 BAD REQUEST' , () => {
+  it('should return Error Message', (done) => {
     chai.request(host)
-        .get('/99999')
+        .get('/--1')
         .end((error, response) => {
-              response.should.have.status(200);
+              response.should.have.status(400);
               response.body.status.should.be.a('Number');
-              response.body.extenso.should.be.a('String');
-              response.body.status.should.be.eql(200);
-              response.body.extenso.should.be.eql('Noventa e Nove Mil e Novecentos e Noventa e Nove');
+              response.body.message.should.be.a('String');
+              response.body.status.should.be.eql(400);
+              response.body.message.should.be.eql('Your requested value is not valid. Request a number between -99999 and 99999, with only numbers and a minus sign in front of the value for negative values.');
           done();
         });
   });
 });
+
+describe('/GET 1a2 - 400 BAD REQUEST' , () => {
+  it('should return Error Message', (done) => {
+    chai.request(host)
+        .get('/1a2')
+        .end((error, response) => {
+              response.should.have.status(400);
+              response.body.status.should.be.a('Number');
+              response.body.message.should.be.a('String');
+              response.body.status.should.be.eql(400);
+              response.body.message.should.be.eql('Your requested value is not valid. Request a number between -99999 and 99999, with only numbers and a minus sign in front of the value for negative values.');
+          done();
+        });
+  });
+});
+
+
+}
+
+errorTests(host);
+
+module.exports = {
+  errorTests
+};
