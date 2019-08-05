@@ -123,11 +123,29 @@ docker run -dt -p 4567:4567 --name romanizer vfbemsilva/romanizer:latest
 
 There are two test environments setup for the application, both of which will return JSON responses for both cases inside the bounds of the expected (*things predicted in the normal behaviour of the application*), and some out-of-bounds (*in an effort to predict marginal behaviour of the application*).
 
-##### 1.3.1 Bash
+##### 1.3.1 Mocha
+
+There are four commands available for testing with mocha + chai:
+
+```
+//runs all the tests in sequence
+npm run test
+
+//runs all the expected values tests
+npm run test-decimals
+
+//runs all the error tests
+npm run test-errors 
+
+//runs all the outliers tests
+npm run test-outliers
+```
+
+##### 1.3.2 Bash
 
 Run the scripts on your terminal to receive a response from a series of curl requests.
 
-##### 1.3.2 Postman
+##### 1.3.3 Postman
 
 Import the collection to your postman local environment. There are four tests of integrity for each request, and in the case of the invalid requests, it is wanted that the response is a **400 BAD REQUEST** error response.
 
