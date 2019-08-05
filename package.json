@@ -6,7 +6,9 @@
   "scripts": {
     "start": "NODE_ENV=development nodemon ./server.js",
     "development": "NODE_ENV=development nodemon ./server.js",
-    "test": "mocha './test/test.js'"
+    "test": "mocha './test/mocha/test.js'",
+    "test-decimals": "mocha './test/mocha/test-decimals.js'",
+    "test-errors": "mocha './test/mocha/test-errors.js'"
   },
   "dependencies": {
     "axios": "^0.18.0",
