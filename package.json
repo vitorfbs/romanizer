@@ -12,7 +12,7 @@
     "test-outliers": "mocha './test/mocha/cases/test-outliers.js'"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "express": "~4.16.0",
     "express-promise-router": "^3.0.3",
     "nodemon": "^1.18.7",
